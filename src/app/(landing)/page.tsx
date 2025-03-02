@@ -4,10 +4,11 @@ import InstagramIcon from "@/assets/images/icons/instagram";
 import LinkedinIcon from "@/assets/images/icons/linkedin";
 import FacebookIcon from "@/assets/images/icons/facebook";
 import GithubIcon from "@/assets/images/icons/github";
+import BlogList from "./blogs/components/BlogList";
 export default function Home() {
   return (
-    <main className="container mx-auto bg-zinc-950 min-h-screen p-8">
-      <section className="space-y-8 mt-12">
+    <>
+      <section className="space-y-8 p-8 pt-12">
         <Image className="w-32" src={Logo} alt="logo blog cat" width={500} height={500} />
         <h1 className="text-6xl font-bold max-w-4xl">Software Enginer, Designer, and Content Creator</h1>
         <p className="text-zinc-400 max-w-2xl">Lorem, ipsum dolor sit amet consectetur
@@ -21,6 +22,7 @@ export default function Home() {
           <FacebookIcon />
         </div>
       </section>
-    </main>
+      <BlogList />
+    </>
   );
 }
