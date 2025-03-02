@@ -5,6 +5,7 @@ import LinkedinIcon from "@/assets/images/icons/linkedin";
 import FacebookIcon from "@/assets/images/icons/facebook";
 import GithubIcon from "@/assets/images/icons/github";
 import BlogList from "./blogs/components/BlogList";
+import BlogForm from "./blogs/components/BlogForm";
 export default function Home() {
   return (
     <>
@@ -23,6 +24,7 @@ export default function Home() {
         </div>
       </section>
       <BlogList />
+      <BlogForm />
     </>
   );
 }
