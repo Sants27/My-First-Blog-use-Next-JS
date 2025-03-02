@@ -1,4 +1,6 @@
 import React from "react";
+// jika ingin menggunakan action.ts, ganti testAction jadi testServerAction
+import { testServerAction } from "./actions";
 
 type BlogDetailProps = {
   params: {
@@ -12,10 +14,23 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
   const response = await fetch("https://pokeapi.co/api/v2/pokemon/ditto");
 
   const data = await response.json();
+
+  // Server Action tanpa memanggil file, langsung dalam page
+  // async function testAction() {
+  //   "use server";
+  //   console.log("ini action dari server yang dipanggil oleh client dalam page");
+  //   // Karena kode ini berjalan di server, pesan akan muncul
+  //   // di terminal bukan di console browser.
+  // }
+  
   return (
     <div>
       <h1 className="text-4xl font-bold">Ini halaman detail blog {slug}</h1>
       <code>Pokemon Name : {data?.name}</code>
+      {/* ganti testAction jadi testServerAction jika ingin menggunakan action.ts (file tambahan) */}
+      <form action={testServerAction}>
+        <button type="submit">Click Me</button>
+      </form>
     </div>
   );
 }
