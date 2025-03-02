@@ -1,6 +1,7 @@
 import React from "react";
-// jika ingin menggunakan action.ts, ganti testAction jadi testServerAction
-import { testServerAction } from "./actions";
+// jika ingin menggunakan inline Action Server, komen import ini
+import { testServerAction } from "./action";
+import Button from "@/app/components/Button";
 
 type BlogDetailProps = {
   params: {
@@ -15,7 +16,7 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
 
   const data = await response.json();
 
-  // Server Action tanpa memanggil file, langsung dalam page
+  // Server Action tanpa memanggil file, langsung dalam page (iniline)
   // async function testAction() {
   //   "use server";
   //   console.log("ini action dari server yang dipanggil oleh client dalam page");
@@ -28,9 +29,10 @@ export default async function BlogDetail({ params }: BlogDetailProps) {
       <h1 className="text-4xl font-bold">Ini halaman detail blog {slug}</h1>
       <code>Pokemon Name : {data?.name}</code>
       {/* ganti testAction jadi testServerAction jika ingin menggunakan action.ts (file tambahan) */}
-      <form action={testServerAction}>
+      {/* <form action={testServerAction}>
         <button type="submit">Click Me</button>
-      </form>
+      </form> */}
+      <Button action={testServerAction}>Ini Button Submit</Button>
     </div>
   );
 }
