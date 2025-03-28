@@ -8,7 +8,7 @@ const posts = [
     title: "Lorem Ipsum",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae elit imperdiet ultricies.",
-    cover: "https://via.placeholder.com/300",
+    cover: "https://picsum.photos/seed/picsum/200/300",
     slug: "lorem-ipsum",
   },
   {
@@ -16,7 +16,7 @@ const posts = [
     title: "Dolor Sit Amet",
     description:
       "Dolor sit amet, consectetur adipiscing elit. Donec nec odio vitae elit imperdiet ultricies.",
-    cover: "https://via.placeholder.com/300",
+    cover: "https://picsum.photos/seed/picsum/200/300",
     slug: "dolor-sit-amet",
   },
   {
@@ -24,7 +24,7 @@ const posts = [
     title: "Consectetur Adipiscing",
     description:
       "Consectetur adipiscing elit. Donec nec odio vitae elit imperdiet ultricies.",
-    cover: "https://via.placeholder.com/300",
+    cover: "https://picsum.photos/seed/picsum/200/300",
     slug: "consectetur-adipiscing",
   },
 ];

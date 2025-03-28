@@ -3,6 +3,7 @@ import React from "react";
 import { testServerAction } from "./action";
 import Button from "@/app/components/Button";
 
+// Digunakan untuk mendapatkan parameter slug dari URL (dynamic route).
 type BlogDetailProps = {
   params: {
     slug: string;

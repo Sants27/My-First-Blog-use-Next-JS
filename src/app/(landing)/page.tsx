@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Logo from "@/assets/images/logo-circle.png";
-import InstagramIcon from "@/assets/images/icons/instagram";
-import LinkedinIcon from "@/assets/images/icons/linkedin";
-import FacebookIcon from "@/assets/images/icons/facebook";
-import GithubIcon from "@/assets/images/icons/github";
+import InstagramIcon from "@/assets/icons/instagram";
+import LinkedinIcon from "@/assets/icons/linkedin";
+import FacebookIcon from "@/assets/icons/facebook";
+import GithubIcon from "@/assets/icons/github";
 import BlogList from "./blogs/components/BlogList";
 import BlogForm from "./blogs/components/BlogForm";
 export default function Home() {

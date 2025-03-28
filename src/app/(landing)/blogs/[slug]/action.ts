@@ -1,7 +1,9 @@
 "use server";
 
 export async function testServerAction() {
-  console.log("ini action dari server yang dipanggil oleh client");
+  console.log("ini action dari server yang dipanggil oleh client"); 
+  // ketika button di page.tsx di klik maka
+  // pesan ini akan muncul di terminal
 }
 
 export async function submitBlog(
