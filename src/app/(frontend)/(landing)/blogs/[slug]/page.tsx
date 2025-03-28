@@ -1,7 +1,7 @@
 import React from "react";
 // jika ingin menggunakan inline Action Server, komen import ini
 import { testServerAction } from "./action";
-import Button from "@/app/components/Button";
+import Button from "@/app/(frontend)/components/Button";
 
 // Digunakan untuk mendapatkan parameter slug dari URL (dynamic route).
 type BlogDetailProps = {
