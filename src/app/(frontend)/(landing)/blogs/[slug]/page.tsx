@@ -10,9 +10,7 @@ import { RichText } from "@payloadcms/richtext-lexical/react";
 
 // Digunakan untuk mendapatkan parameter slug dari URL (dynamic route).
 type BlogDetailProps = {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 };
 
 async function getBlog(slug: string) {

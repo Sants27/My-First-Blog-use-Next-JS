@@ -12,7 +12,8 @@ export async function submitBlog(
 )   {
     try {
       const response = await fetch("pokeapi");      // Mengambil data dari API
-  
+      console.log(previousState);
+      console.log(formData);
       const data = await response.json();           // Mengubah response ke JSON
   
       return data;                                  // Mengembalikan hasil data
