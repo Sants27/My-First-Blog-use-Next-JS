@@ -24,7 +24,7 @@ export default async function Home() {
   return (
     <>
       <section className="space-y-8 p-8 pt-12">
-        <Image className="w-32" src={logo.url ?? ""} alt={logo.alt} width={500} height={500} />
+        <Image className="w-32" src={logo?.url ?? ""} alt={logo?.alt} width={500} height={500} />
         <h1 className="text-6xl font-bold max-w-4xl">Software Enginer, Designer, and Content Creator</h1>
         <p className="text-zinc-400 max-w-2xl">Lorem, ipsum dolor sit amet consectetur
         adipisicing elit. Maiores recusandae officiis totam corrupti obcaecati autem cumque
