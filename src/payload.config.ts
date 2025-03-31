@@ -12,6 +12,7 @@ import { Media } from './collections/Media'
 import { General } from './globals/general'
 import { Post } from './collections/Post'
 import { nodemailerAdapter } from '@payloadcms/email-nodemailer'
+import { uploadthingStorage } from '@payloadcms/storage-uploadthing'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -31,7 +32,7 @@ export default buildConfig({
     outputFile: path.resolve(dirname, 'payload-types.ts'),
   },
   email: nodemailerAdapter({
-    defaultFromAddress: 'noreply@sants.com',
+    defaultFromAddress: 'noreply@santz.com',
     defaultFromName: 'Payload',
     // Any Nodemailer transport can be used
     transportOptions: {
@@ -52,6 +53,17 @@ export default buildConfig({
   sharp,
   plugins: [
     payloadCloudPlugin(),
+    uploadthingStorage({
+      collections: {
+        media: {
+          disablePayloadAccessControl: true,
+        },
+      },
+      options: {
+        token: process.env.UPLOADTHING_TOKEN,
+        acl: 'public-read',
+      },
+    }),
     // storage-adapter-placeholder
   ],
 })
