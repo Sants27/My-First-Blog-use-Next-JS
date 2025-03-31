@@ -12,6 +12,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "picsum.photos", // Tambahkan ini untuk Picsum Photos
       },
+      {
+        protocol: "https",
+        hostname: "utfs.io",
+      }
     ],
   },
 };
