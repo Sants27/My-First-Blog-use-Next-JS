@@ -10,6 +10,8 @@ import { getPayload } from "payload";
 import payloadConfig from "@payload-config";
 import { Media } from "@/payload-types";
 
+export const revalidate = 15;
+
 export default async function Home() {
   const general = (await getPayload({config: payloadConfig})).findGlobal({
     slug: "general"
